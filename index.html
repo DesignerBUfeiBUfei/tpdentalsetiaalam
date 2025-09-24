@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP Dental Setia Alam</title>
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KK85R3MZ');</script>
+  <!-- End Google Tag Manager -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0; padding: 0;
+      background: #fff; color: #333;
+    }
+    header {
+      background: #fff;
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #ddd;
+    }
+    header img.logo {height: 50px;}
+    nav ul {list-style: none; display: flex; margin: 0; padding: 0;}
+    nav ul li {margin-left: 20px;}
+    nav ul li a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    section {padding: 60px 20px; text-align: center;}
+    h2 {font-weight: 700;}
+    .hero img {max-width: 100%; height: auto; border-radius: 10px;}
+    .hero button {
+      margin-top: 20px; padding: 10px 20px; background: #0077b6;
+      color: #fff; border: none; border-radius: 5px; cursor: pointer;
+    }
+    .services {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .services div {
+      background: linear-gradient(135deg, #058e97, #0962c8);
+      border-radius: 12px; padding: 20px; color: #fff;
+    }
+    .services img {width: 100%; border-radius: 12px;}
+    .doctor {display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; text-align: left;}
+    .doctor-text {flex: 1; min-width: 250px;}
+    .doctor-photo {flex: 1; min-width: 250px; text-align: center;}
+    .doctor-photo img {width: 250px; border-radius: 10px;}
+    .reviews {position: relative;}
+    .reviews img {max-width: 30%; margin: 10px; border-radius: 10px;}
+    .review-link {
+      position: absolute; top: 10px; right: 10px; background: #0077b6;
+      color: #fff; padding: 8px 12px; border-radius: 5px; text-decoration: none;
+    }
+    /* Contact Section */
+    .contact-container {
+      display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start; justify-content: center; margin-top: 20px;
+    }
+    .contact-map {flex: 1; min-width: 300px;}
+    .contact-info {flex: 1; min-width: 300px; text-align: left;}
+    .contact-info p {font-size: 16px; margin: 15px 0;}
+    .contact-info i {margin-right: 10px; font-size: 20px; color: #000;}
+    .contact-info a {
+      text-decoration: none;
+      color: #000;
+    }
+    footer {background: #0077b6; color: white; text-align: center; padding: 15px;}
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px;
+      background-color: #25d366; color: #fff; border-radius: 50%; text-align: center;
+      font-size: 30px; box-shadow: 2px 2px 3px #999; z-index: 100;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .whatsapp-float i {margin: 0;}
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK85R3MZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <img src="img/logo.png" alt="TP Dental Setia Alam Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#doctor">Our Doctor</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <img src="img/your-hero-image.png" alt="Dental Clinic">
+    <br>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Get in Touch</button>
+  </section>
+
+  <section id="about">
+    <img src="img/about.jpg" alt="TP Dental Setia Alam Logo" class="logo">
+    <h2>TP DENTAL SETIA ALAM</h2>
+    <p>is committed in delivering the best comprehensive treatment in each patient. We offer multiple services ranging from general dentistry, preventive, child and orthodontic treatments.<br><br>
+    We at TP Setia Alam are dedicated to help you achieve optimal oral health and a confident smile, all within a professional and welcoming environment.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div><img src="img/service1.png" alt="General Dentistry"><h3>General Dentistry</h3></div>
+      <div><img src="img/service2.jpg" alt="Dentures"><h3>Dentures</h3></div>
+      <div><img src="img/service3.png" alt="Oral Surgery"><h3>Oral Surgery</h3></div>
+      <div><img src="img/service4.png" alt="Braces"><h3>Braces</h3></div>
+      <div><img src="img/service5.jpg" alt="Children Dentistry"><h3>Children Dentistry</h3></div>
+    </div>
+  </section>
+
+  <section id="doctor" class="doctor">
+    <div class="doctor-text">
+      <h2>DR KELVIN QUAH (I.D.G, USU)</h2>
+      <p>A highly skilled dental surgeon with 8 years of experience. Dr Kelvin graduated from Universitas Sumatera Utara in 2016. After returning to Malaysia, Dr Kelvin was posted to Langkawi. He served in Klinik Pergigian Air Hangat and Hospital Sultanah Maliha focusing on outpatient and trauma cases. Dr Kelvin also had the opportunity to serve as a junior Dental Officer at the Oral Maxillofacial Surgery Department and Paediatric Dental Department at Hospital Sultanah Bahiyah.<br><br>
+      After leaving Ministry of Health in 2019, Dr Kelvin has been a full time private practioner. His focus is mainly on general dentistry, dentures and minor oral surgery.</p>
+    </div>
+    <div class="doctor-photo">
+      <img src="img/dr.kelvin.png" alt="Dr Kelvin Quah Photo">
+    </div>
+  </section>
+
+  <section id="reviews" class="reviews">
+    <h2>Google Reviews</h2>
+    <a href="https://g.page/r/CZb-YourGoogleReviewLink" target="_blank" class="review-link">Leave a Review</a>
+    <img src="img/review1.png" alt="Review Screenshot 1">
+    <img src="img/review2.png" alt="Review Screenshot 2">
+    <img src="img/review3.png" alt="Review Screenshot 3">
+    <img src="img/review4.png" alt="Review Screenshot 4">
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <!-- Left Google Map -->
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3983.8741193764613!2d101.469003!3d3.127964!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc516ad822e9bb%3A0xf1bcac0f9386655a!2sTP%20Dental%20Setia%20Alam%20(Dental%20Clinic%20Setia%20Alam)!5e0!3m2!1szh-CN!2sus!4v1758682935365!5m2!1szh-CN!2sus"
+          width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <!-- Right Contact Info -->
+      <div class="contact-info">
+        <p><i class="fab fa-whatsapp"></i><a href="https://wa.me/601112700876" target="_blank">011-1270 0876</a></p>
+        <p><i class="fab fa-instagram"></i><a href="https://instagram.com/tpdental_medical" target="_blank">tpdental_medical</a></p>
+        <p><i class="fab fa-facebook"></i><a href="https://facebook.com/TPDentalSetiaAlam" target="_blank">TP Dental Setia Alam</a></p>
+        <p><i class="fas fa-map-marker-alt"></i>No 65, (Ground Floor) Jalan Setia Gemilang BG U13/BG, Precint 15, Setia Alam Seksyen U13, 40170 Shah Alam, Selangor</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Privacy Policy&copy; 2025 TP Dental Setia Alam. All Rights Reserved.</p>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wasap.me/601112700876" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</body>
+</html>
