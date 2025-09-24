@@ -55,7 +55,12 @@
       background: linear-gradient(135deg, #058e97, #0962c8);
       border-radius: 12px; padding: 20px; color: #fff;
     }
-    .services img {width: 100%; border-radius: 12px;}
+    .services img {
+  width: 100%;
+  height: 250px;          /* 统一高度，可以改成 300px/350px */
+  object-fit: cover;      /* 自动裁切，不会变形 */
+  border-radius: 12px;
+}
     .doctor {display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; text-align: left;}
     .doctor-text {flex: 1; min-width: 250px;}
     .doctor-photo {flex: 1; min-width: 250px; text-align: center;}
