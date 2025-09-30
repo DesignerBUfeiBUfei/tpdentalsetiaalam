@@ -48,21 +48,39 @@
     h2 {font-weight: 700;}
     .hero img {max-width: 100%; height: auto; border-radius: 10px;}
     /* Get in Touch 按钮 */
-.cta-btn {
-  margin-top: 20px;
-  padding: 18px 40px;            /* ✅ 改大按钮 */
-  font-size: 20px;               /* ✅ 放大文字 */
+.hero-container {
+  position: relative; 
+  display: inline-block; 
+  width: 100%;
+}
+
+.hero-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* 按钮覆盖在图片中下 */
+.hero-container .cta-btn {
+  position: absolute;
+  bottom: 10%;               /* ✅ 距离底部 10% */
+  left: 50%;                 /* ✅ 居中 */
+  transform: translateX(-50%);
+  padding: 18px 40px;
+  font-size: 20px;
   font-weight: 700;
-  background: linear-gradient(135deg, #058e97, #0962c8); /* ✅ 渐变背景 */
+  background: linear-gradient(135deg, #058e97, #0962c8);
   color: #fff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s ease;
 }
-.cta-btn:hover {
-  opacity: 0.9;                   /* ✅ hover 效果 */
+
+.hero-container .cta-btn:hover {
+  opacity: 0.9;
 }
+
 
 /* Services 区块 */
 .services div {
@@ -150,11 +168,13 @@
   </header>
 
 
-  <section id="home" class="hero">
-  <img src="img/your-hero-image.png" alt="Dental Clinic">
-  <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
-    Get in Touch
-  </button>
+ <section id="home" class="hero">
+  <div class="hero-container">
+    <img src="img/your-hero-image.png" alt="Dental Clinic">
+    <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
+      Get in Touch
+    </button>
+  </div>
 </section>
 
   </section>
