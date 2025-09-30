@@ -36,7 +36,12 @@
       z-index: 1000;
       border-bottom: 1px solid #ddd;
     }
-    header img.logo {height: auto;width: 5px;}
+    header /* Logo 图片大小 */
+.logo img {
+  height: 60px;   /* 控制高度 */
+  width: auto;    /* 保持比例 */
+  display: block;
+}
     nav ul {list-style: none; display: flex; margin: 0; padding: 0;}
     nav ul li {margin-left: 40px;}
     nav ul li a {
