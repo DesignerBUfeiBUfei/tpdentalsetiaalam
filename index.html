@@ -26,29 +26,42 @@
       background: #fff; color: #333;
     }
     header {
-      background: #fff;
-      padding: 0.5rem 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid #ddd;
-    }
-    header /* Logo 图片大小 */
+  background: #fff;
+  padding: 1rem 2rem;   /* 调高导航高度 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Logo 图片大小 */
 .logo img {
-  height: 20px;   /* 控制高度 */
-  width: auto;    /* 保持比例 */
+  height: 60px;   /* 普通网站 logo 高度 */
+  width: auto;
   display: block;
 }
-    nav ul {list-style: none; display: flex; margin: 0; padding: 0;}
-    nav ul li {margin-left: 40px;}
-    nav ul li a {
-      color: #000;
-      text-decoration: none;
-      font-weight: 1000;
-    }
+
+/* 导航菜单 */
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 40px;
+}
+
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  font-size:
+
     section {padding: 60px 20px; text-align: center;}
     h2 {font-weight: 900;}
     .hero img {max-width: 100%; height: auto; border-radius: 10px;}
