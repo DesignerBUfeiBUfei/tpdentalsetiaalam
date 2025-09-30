@@ -215,7 +215,22 @@ nav ul li a {
   width: 100%;
   border-radius: 15px;
 }
-    
+ /* 按钮覆盖在图片中下 */
+.hero-container .cta-btn2 {
+  position: absolute;
+  bottom: 0%;               /* ✅ 距离底部 10% */
+  left: 50%;                 /* ✅ 居中 */
+  transform: translateX(-50%);
+  padding: 18px 40px;
+  font-size: 30px;
+  font-weight: 200;
+  background: linear-gradient(135deg, #058e97, #0962c8);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}   
     /* Contact Section */
     .contact-container {
       display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start; justify-content: center; margin-top: 20px;
@@ -371,8 +386,11 @@ nav ul li a {
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/601112700876" class="whatsapp-float" target="_blank">Get In Touch
+  <a href="https://wa.me/601112700876" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
+    <button class="cta-btn2" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
+      Get in Touch
+    </button>
   </a>
 </body>
 </html>
