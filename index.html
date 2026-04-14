@@ -173,48 +173,70 @@ nav ul li a {
     }
 
  /* Doctor Section */
-.doctor {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* 让内容靠中间 */
-  padding: 20px 20px;
-  gap: 0px; /* 左右文字和图片之间留空 */
-  background: linear-gradient(135deg, rgba(5, 142, 151, 0.5), rgba(9, 98, 200, 0.5));
-  border-radius: 30px;
-  flex-wrap: wrap; /* 手机时自动换行 */
-}
+    .doctor {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+      background: linear-gradient(135deg, rgba(5, 142, 151, 0.5), rgba(9, 98, 200, 0.5));
+      border-radius: 30px;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-.doctor-text {
-  flex: 1;
-  fint-size:·1000px;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center; /* 让文字整体居中 */
-}
+    .doctor-text {
+      flex: 1;
+      min-width: 280px;
+      text-align: center;
+    }
 
-.doctor-text h2 {
-  color: #102770;
-  font-weight: 1000;
-  margin:0 auto;
-}
+    .doctor-text h2 {
+      color: #102770;
+      font-weight: 700;
+      margin: 0 0 15px 0;
+      font-size: 28px;
+    }
 
-.doctor-text p {
-  color: #fff;
-  text-align: justify;
-  line-height: 1.5;
-  max-width: 1000px; /* 限制段落宽度，保证更整齐 */
-}
+    .doctor-text p {
+      color: #fff;
+      text-align: center;
+      line-height: 1.6;
+      margin: 0;
+      font-size: 14px;
+    }
 
-.doctor-photo {
-  flex: 1;
-  text-align: right;
-}
+    .doctor-photo {
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+    }
 
-.doctor-photo img {
-  max-width: 250px; /* 缩小一点，避免太大 */
-  width: 100%;
-  border-radius: 5px;
-}
+    .doctor-photo img {
+      max-width: 250px;
+      width: 100%;
+      border-radius: 15px;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .doctor {
+        gap: 20px;
+        padding: 30px 15px;
+      }
+
+      .doctor-text h2 {
+        font-size: 24px;
+      }
+
+      .doctor-text p {
+        font-size: 13px;
+      }
+    }
+    
  /* 按钮覆盖在图片中下 */
 .hero-container .cta-btn2 {
   position: absolute;
