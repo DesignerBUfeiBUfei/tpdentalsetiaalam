@@ -1,511 +1,943 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TP Dental Setia Alam</title><!-- Font Awesome for Icons -->
-  <link rel="icon" type="image/favicon.png" href="images/favicon.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"><!-- 网站小图标 -->
-  <link rel="icon" type="img/favicon.png" href="images/favicon.png"><!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"><!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-KK85R3MZ');</script><!-- End Google Tag Manager -->
+
+  <title>TP Dental Setia Alam | Dental Clinic</title>
+  <meta name="description" content="TP Dental Setia Alam provides general dentistry, dentures, oral surgery, braces and children's dentistry in Setia Alam, Selangor.">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),
+      dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KK85R3MZ');
+  </script>
+
   <style>
-    body {
-      font-family: 'Poppins-bold', sans-serif;
-      margin: 0; 
-      padding: 0;
-      background: #fff; 
-      color: #333;
+    :root {
+      --navy: #102770;
+      --teal: #058e97;
+      --blue: #0962c8;
+      --text: #333333;
+      --white: #ffffff;
+      --soft-bg: #f5f8fb;
+      --content-width: 1120px;
     }
 
-    header {
-      background: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.3;
+    }
+
+    h2 {
+      margin-bottom: 22px;
+      color: var(--navy);
+      font-size: clamp(28px, 3vw, 34px);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .section {
+      padding: 72px 20px;
+    }
+
+    .section-inner {
+      width: 100%;
+      max-width: var(--content-width);
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+
+    .site-header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid #ddd;
-    }
-
-    /* 导航菜单 */
-    nav ul {
-      list-style: none;
       display: flex;
-      margin: 0;
-      padding: 0;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 12px 30px;
+      background: var(--white);
+      border-bottom: 1px solid #e6e6e6;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
 
-    nav ul li {
-      margin-left: 40px;
-    }
-
-    nav ul li a {
-      color: #000;
+    .logo-link {
+      display: inline-flex;
+      align-items: center;
       text-decoration: none;
-      font-weight: 1000;
-      font-size: 20px;
+    }
+
+    .site-logo {
+      width: min(340px, 38vw);
+      max-height: 76px;
+      object-fit: contain;
+      object-position: left center;
     }
 
     .menu-toggle {
       display: none;
-      background: none;
-      border: none;
+      padding: 8px 10px;
+      color: #111;
+      background: transparent;
+      border: 0;
+      font-size: 26px;
       cursor: pointer;
-      font-size: 28px;
-      color: #000;
-      padding: 10px;
     }
 
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      header {
-        position: relative;
-      }
-
-      header img {
-        height: 60px !important;
-        width: 250px !important;
-      }
-
-      nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #fff;
-        border-bottom: 1px solid #ddd;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-      }
-
-      nav.active {
-        max-height: 500px;
-      }
-
-      nav ul {
-        flex-direction: column;
-        padding: 0;
-      }
-
-      nav ul li {
-        margin: 0;
-        border-bottom: 1px solid #f0f0f0;
-      }
-
-      nav ul li a {
-        display: block;
-        padding: 15px 20px;
-        font-size: 18px;
-      }
+    .nav-menu ul {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
     }
 
-    section {
-      padding: 60px 20px; 
-      text-align: center;
+    .nav-menu a {
+      display: block;
+      padding: 8px 0;
+      color: #111;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.2s ease;
     }
 
-    h2 {
-      font-weight: 900;
+    .nav-menu a:hover {
+      color: var(--teal);
     }
 
-    
+    /* HERO */
 
-    /* About Us */
-    #about {
-      padding: 60px 20px;
-      background: linear-gradient(135deg, rgba(5, 142, 151, 0.5), rgba(9, 98, 200, 0.5));
+    .hero {
+      padding: 36px 20px 48px;
+      background: var(--soft-bg);
+    }
+
+    .hero-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hero-image {
+      width: 100%;
+      border-radius: 14px;
+      object-fit: cover;
+    }
+
+    /* ABOUT US */
+
+    .about-section {
+      background: linear-gradient(
+        135deg,
+        rgba(5,142,151,0.92),
+        rgba(9,98,200,0.92)
+      );
       border-radius: 10px;
     }
 
     .about-container {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      gap: 20px;
+      gap: 42px;
+      width: 100%;
+      max-width: var(--content-width);
+      margin: 0 auto;
+    }
+
+    .about-text,
+    .about-image-wrap {
+      flex: 1 1 0;
+      min-width: 0;
     }
 
     .about-text {
-     flex: 1;
-      min-width: 280px;.hero-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      padding: 40px 20px;
-      background: #f5f5f5;
-    }
-.hero {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      padding: 40px 20px;
-      background: #f5f5f5;
-    }
-    
-    .hero-container {
-      position: relative;
-      display: inline-block;
-      width: 100%;
-      max-width: 800px;
-    }
-    
-    .hero-container img {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-width: 100%;
-      border-radius: 10px;
-    }
-     
       text-align: center;
     }
 
     .about-text h2 {
-      color: #102770;
+      margin-bottom: 20px;
+      color: var(--white);
+      font-size: clamp(28px, 3vw, 34px);
       font-weight: 700;
-      margin: 0 0 15px 0;
-      font-size: 28px;
-    }
-
-    .about-text h3 {
-      color: #fff;
-      text-align: justify;
-      line-height: 1.8;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .about-img {
-      flex: 1;
-      min-width: 280px;
-      text-align: right;
-    }
-
-    .about-img img {
-      max-width: 400px;
-      border-radius: 10px;
-     padding: 0px 0px 0px 5px;
-    }
-
-    /* Services */
-    #services {
-      padding: 100px 20px;
       text-align: center;
     }
 
-    .services {
+    .about-text p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: var(--white);
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 1.9;
+      text-align: center;
+    }
+
+    .about-image-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-image {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    /* OUR SERVICES */
+
+    .services-section {
+      background: var(--white);
+    }
+
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 22px;
     }
 
     .service-card {
+      min-width: 0;
+      padding: 12px;
+      text-align: center;
       border-radius: 12px;
-      padding: 10px;
-      color: #102770;
-      text-align: center;
+      background: #fff;
+      box-shadow: 0 4px 18px rgba(16,39,112,0.08);
     }
-   
-   .service-text{
-      flex: 1;
-      min-width: 280px;
-      text-align: center;
-   }   
-   .service-text h2{
-      color: #102770;
+
+    .service-card h3 {
+      display: flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 17px;
       font-weight: 700;
-      margin: 0 0 15px 0;
-      font-size: 28px;
-   }
+    }
+
     .service-card img {
       width: 100%;
-      height: 400px;
-      object-fit: cover;
+      height: 260px;
       border-radius: 8px;
-      margin-bottom: 10px;
+      object-fit: cover;
+      object-position: center;
     }
 
-    .services img {
-      width: 100%; 
-      border-radius: 12px;
+    /* OUR DOCTOR */
+
+    .doctor-section {
+      background: linear-gradient(
+        135deg,
+        rgba(5,142,151,0.92),
+        rgba(9,98,200,0.92)
+      );
+      border-radius: 28px;
     }
 
-    .reviews {
-      position: relative;
-    }
-
-    .reviews img {
-      max-width: 100%; 
-      margin: 10px; 
-      border-radius: 10px;
-    }
-
-    .review-link {
-      position: absolute; 
-      top: 10px; 
-      right: 10px; 
-      background: linear-gradient(135deg, #058e97, #0962c8);
-      color: #fff; 
-      padding: 8px 12px; 
-      border-radius: 5px; 
-      text-decoration: none;
-    }
-
-    /* Doctor Section */
-    .doctor {
+    .doctor-container {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 40px 20px;
-      gap: 30px;
-      background: linear-gradient(135deg, rgba(5, 142, 151, 0.5), rgba(9, 98, 200, 0.5));
-      border-radius: 30px;
-      flex-wrap: wrap;
-      max-width: auto;
+      gap: 44px;
+      width: 100%;
+      max-width: var(--content-width);
       margin: 0 auto;
     }
 
     .doctor-text {
-      flex: 1;
-      min-width: 280px;
+      flex: 1 1 0;
+      min-width: 0;
       text-align: center;
     }
 
     .doctor-text h2 {
-      color: #102770;
+      margin-bottom: 20px;
+      color: var(--white);
+      font-size: clamp(25px, 2.8vw, 30px);
       font-weight: 700;
-      margin: 0 0 15px 0;
-      font-size: 28px;
+      text-align: center;
     }
 
     .doctor-text p {
-      color: #fff;
+      max-width: 650px;
+      margin: 0 auto;
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.85;
       text-align: center;
-      line-height: 1.6;
-      margin: 0;
-      font-size: 14px;
     }
 
     .doctor-photo {
-      flex: 1;
-      min-width: 200px;
-      text-align: center;
+      flex: 0 1 300px;
+      min-width: 0;
+      display: flex;
+      justify-content: center;
     }
 
     .doctor-photo img {
-      max-width: 250px;
       width: 100%;
-      border-radius: 40px;
-      display: block;
-      margin: 0 auto;
+      max-width: 270px;
+      border-radius: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      object-fit: cover;
+    }
+
+    /* GOOGLE REVIEWS */
+
+    .reviews-section {
+      padding-top: 64px;
+      padding-bottom: 64px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    @media (max-width: 768px) {
-      .doctor {
-        gap: 20px;
-        padding: 30px 15px;
-      }
-
-      .doctor-text h2 {
-        font-size: 24px;
-      }
-
-      .doctor-text p {
-        font-size: 13px;
-      }
+    .reviews-content {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-    /* 按钮覆盖在图片中下 */
-    .hero-container .cta-btn2 {
+    .review-image {
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 12px;
+    }
+
+    .review-link {
       position: absolute;
-      bottom: 0%;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 18px 40px;
-      font-size: 30px;
-      font-weight: 200;
-      background: linear-gradient(135deg, #058e97, #0962c8);
-      color: #fff;
-      border: none;
+      top: 16px;
+      right: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 12px 18px;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--teal), var(--blue));
       border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s ease;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
-    /* Contact Section */
+    .review-link:hover {
+      filter: brightness(0.95);
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+      background: var(--soft-bg);
+    }
+
     .contact-container {
-      display: flex; 
-      flex-wrap: wrap; 
-      gap: 30px; 
-      align-items: flex-start; 
-      justify-content: center; 
-      margin-top: 20px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 36px;
+      align-items: stretch;
     }
 
     .contact-map {
-      flex: 1; 
-      min-width: 300px;
+      min-width: 0;
+      min-height: 350px;
+      overflow: hidden;
+      background: #e8edf2;
+      border-radius: 12px;
+    }
+
+    .contact-map iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 350px;
+      border: 0;
     }
 
     .contact-info {
-      flex: 1; 
-      min-width: 300px; 
-      text-align: left;
+      min-width: 0;
+      align-self: center;
+      padding: 10px 0;
     }
 
     .contact-info p {
-      font-size: 16px; 
-      margin: 15px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin: 0 0 20px;
+      color: #222;
+      font-size: 16px;
+      font-weight: 500;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-info p:last-child {
+      margin-bottom: 0;
     }
 
     .contact-info i {
-      margin-right: 10px; 
-      font-size: 20px; 
-      color: #000;
+      flex: 0 0 22px;
+      margin-top: 5px;
+      color: var(--navy);
+      font-size: 20px;
+      text-align: center;
     }
 
     .contact-info a {
+      color: #222;
       text-decoration: none;
-      color: #000;
     }
 
-    footer {
-      background: linear-gradient(135deg, #058e97, #0962c8); 
-      color: white; 
-      text-align: center; 
-      padding: 15px;
+    .contact-info a:hover {
+      color: var(--blue);
+      text-decoration: underline;
     }
 
+    /* FOOTER */
+
+    .site-footer {
+      padding: 20px;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--teal), var(--blue));
+      text-align: center;
+    }
+
+    .site-footer p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* FLOATING WHATSAPP BUTTON */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 1100;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 18px;
+      color: var(--white);
+      background: #25d366;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-2px);
+    }
+
+    .whatsapp-float i {
+      font-size: 22px;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 1000px) {
+      .services-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .service-card img {
+        height: 280px;
+      }
+
+      .site-logo {
+        width: min(300px, 34vw);
+      }
+
+      .nav-menu ul {
+        gap: 18px;
+      }
+
+      .nav-menu a {
+        font-size: 15px;
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 768px) {
+      html {
+        scroll-padding-top: 80px;
+      }
+
+      .site-header {
+        position: sticky;
+        padding: 10px 16px;
+        gap: 12px;
+      }
+
+      .site-logo {
+        width: min(250px, 68vw);
+        max-height: 60px;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: 0;
+        overflow: hidden;
+        background: var(--white);
+        border-bottom: 1px solid #e6e6e6;
+        box-shadow: 0 8px 12px rgba(0,0,0,0.06);
+        transition: max-height 0.25s ease;
+      }
+
+      .nav-menu.active {
+        max-height: 360px;
+      }
+
+      .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 6px 0;
+      }
+
+      .nav-menu li {
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .nav-menu li:last-child {
+        border-bottom: 0;
+      }
+
+      .nav-menu a {
+        padding: 12px 20px;
+        font-size: 16px;
+      }
+
+      .section {
+        padding: 52px 18px;
+      }
+
+      .hero {
+        padding: 20px 14px 30px;
+      }
+
+      .about-container,
+      .doctor-container {
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      .about-text,
+      .about-image-wrap,
+      .doctor-text,
+      .doctor-photo {
+        flex: 1 1 auto;
+        width: 100%;
+      }
+
+      .about-text p,
+      .doctor-text p {
+        font-size: 15px;
+      }
+
+      .about-image {
+        max-width: 420px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .service-card {
+        padding: 10px;
+      }
+
+      .service-card h3 {
+        min-height: 44px;
+        font-size: 15px;
+      }
+
+      .service-card img {
+        height: 220px;
+      }
+
+      .doctor-section {
+        border-radius: 20px;
+      }
+
+      .doctor-photo img {
+        max-width: 240px;
+      }
+
+      .reviews-section {
+        padding: 48px 14px;
+      }
+
+      .review-link {
+        top: 10px;
+        right: 10px;
+        padding: 9px 12px;
+        font-size: 13px;
+      }
+
+      .contact-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .contact-map,
+      .contact-map iframe {
+        min-height: 300px;
+      }
+
+      .contact-info {
+        padding: 0;
+      }
+
+      .whatsapp-float {
+        right: 14px;
+        bottom: 14px;
+        padding: 12px 15px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card img {
+        height: 260px;
+      }
+
+      .review-link {
+        position: static;
+        margin: 0 0 14px;
+      }
+
+      .whatsapp-float {
+        padding: 12px;
+      }
+
+      .whatsapp-float span {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
-  <style>body { box-sizing: border-box; }</style>
-  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
- </head>
- <body><!-- Google Tag Manager (noscript) -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
   <noscript>
-   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK85R3MZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript><!-- End Google Tag Manager (noscript) -->
-  <header><a href="#home"> <img src="img/logo.png" alt="TP Dental Setia Alam Logo" style="height:80px; width:400px; display:block;"> </a> <button class="menu-toggle" id="menuToggle"> <i class="fas fa-bars"></i> </button>
-   <nav id="navMenu">
-    <ul>
-     <li><a href="#home">Home</a></li>
-     <li><a href="#about">About</a></li>
-     <li><a href="#services">Services</a></li>
-     <li><a href="#doctor">Our Doctor</a></li>
-     <li><a href="#contact">Contact</a></li>
-    </ul>
-   </nav>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK85R3MZ"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a class="logo-link" href="#home" aria-label="TP Dental Setia Alam home">
+      <img class="site-logo" src="img/logo.png" alt="TP Dental Setia Alam Logo">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+      aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+    </button>
+
+    <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#doctor">Our Doctor</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-<section id="home" class="hero">
-   <section class="hero-section">
-   <div class="hero-container">
-    <img src="img/your-hero-image.png" alt="Dental Clinic">
-   </div>
-   </section>
-  <section id="about">
-   <div class="about-container">
-    <div class="about-text">
-     <h2>TP DENTAL SETIA ALAM</h2>
-     <h3>is committed in delivering the best comprehensive treatment in each patient. We offer multiple services ranging from general dentistry, preventive, child and orthodontic treatments.<br><br>
-       We at TP Setia Alam are dedicated to help you achieve optimal oral health and a confident smile, all within a professional and welcoming environment.</h3>
-    </div>
-    <div class="about-img"><img src="img/TP Dental.jpeg" alt="TP Dental Setia Alam Logo">
-    </div>
-   </div>
-  </section>
-  <section id="services">
-   <h>Our Services</h>
-   <div class="services">
-    <div class="service-card">
-     <h3>General Dentistry</h3><img src="img/services1.png" alt="General Dentistry">
-    </div>
-    <div class="service-card">
-     <h3>Dentures</h3><img src="img/services2.jpg" alt="Dentures">
-    </div>
-    <div class="service-card">
-     <h3>Oral Surgery</h3><img src="img/services3.png" alt="Oral Surgery">
-    </div>
-    <div class="service-card">
-     <h3>Braces</h3><img src="img/services4.png" alt="Braces">
-    </div>
-    <div class="service-card">
-     <h3>Children Dentistry</h3><img src="img/services5.jpg" alt="Children Dentistry">
-    </div>
-   </div>
-  </section>
-  <section id="doctor" class="doctor">
-   <div class="doctor-text">
-    <h2>DR KELVIN QUAH (I.D.G, USU)</h2>
-    <p>A highly skilled dental surgeon with a decade of experience. Dr Kelvin graduated from Universitas Sumatera Utara in 2016. After returning to Malaysia, Dr Kelvin was posted to Langkawi. He served in Klinik Pergigian Air Hangat and Hospital Sultanah Maliha focusing on outpatient and trauma cases. Dr Kelvin also had the opportunity to serve as a junior Dental Officer at the Oral Maxillofacial Surgery Department and Paediatric Dental Department at Hospital Sultanah Bahiyah.<br><br>
-      After leaving Ministry of Health in 2019, Dr Kelvin has been a full time private practioner. His focus is mainly on general dentistry, dentures and minor oral surgery.</p>
-   </div>
-   <div class="doctor-photo"><img src="img/drkelvin.jpg" alt="Dr Kelvin Quah Photo">
-   </div>
-  </section>
-  <section id="reviews" class="reviews">
-  <a href="https://www.google.com/maps/place/TP+Dental+Setia+Alam+(Dental+Clinic+Setia+Alam)/@3.1279642,101.4664279,17z/data=!3m1!5s0x31cc5171dd958755:0xb3fc4439e7acaa70!4m8!3m7!1s0x31cc516ad822e9bb:0xf1bcac0f9386655a!8m2!3d3.1279642!4d101.4690028!9m1!1b1!16s%2Fg%2F11s5gk7qxc?entry=ttu&amp;g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="review-link" style="position:absolute;top:10px;right:10px;background:linear-gradient(135deg, #058e97, #0962c8);color:#fff;padding:14px 24px;border-radius:10px;text-decoration:none;font-size:24px;font-weight:600;display:inline-flex;align-items:center;gap:8px;"> <i class="fa-brands fa-google"></i>&nbsp;Make A Review </a> <img src="img/review.jpg" alt="Review Screenshot 1">
-  </section>
-  <section id="contact" class="contact">
-   <h2>Contact Us</h2>
-   <div class="contact-container"><!-- Left Google Map -->
-    <div class="contact-map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3983.. !2d101.469003!3d3.127964!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc516ad822e9bb%3A0xf1bcac0f9386655a!2sTP%20Dental%20Setia%20Alam%20(Dental%20Clinic%20Setia%20Alam)!5e0!3m2!1szh-CN!2sus!4v. !5m2!1szh-CN!2sus" width="100%" height="350" style="border:0;" allowfullscreen loading="lazy"></iframe>
-    </div><!-- Right Contact Info -->
-    <div class="contact-info">
-     <p><i class="fab fa-whatsapp"></i><a href="https://wa.me/601112700876" target="_blank">011-1270 0876</a></p>
-     <p><i class="fab fa-instagram"></i><a href="https://www.instagram.com/tpdental__/" target="_blank">tpdental_medical</a></p>
-     <p><i class="fab fa-facebook"></i><a href="https://www.facebook.com/tpdentalmedical/" target="_blank">TP Dental Setia Alam</a></p>
-     <p><i class="fas fa-map-marker-alt"></i>No 65, (Ground Floor) Jalan Setia Gemilang BG U13/BG, Precint 15, Setia Alam Seksyen U13, 40170 Shah Alam, Selangor</p>
-    </div>
-   </div>
-  </section>
-  <footer>
-   <p>Privacy Policy© 2025 TP Dental Setia Alam. All Rights Reserved.</p>
-  </footer><!-- WhatsApp Floating Button --> <a href="https://wa.me/601112700876" target="_blank" style="position: fixed; bottom: 20px; right: 20px; 
-            background: #25D366; color: white; border-radius: 30px; 
-            padding: 12px 20px; display: flex; align-items: center; 
-            text-decoration: none; font-weight: bold; font-size: 16px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2); z-index:1000;"> <i class="fab fa-whatsapp" style="font-size:22px; margin-right:10px;"></i> GET IN TOUCH </a>
+
+  <main>
+    <!-- HERO IMAGE -->
+    <section id="home" class="hero" aria-label="Welcome to TP Dental Setia Alam">
+      <div class="hero-inner">
+        <!-- Change this filename if your actual hero image has a different name -->
+        <img class="hero-image" src="img/your-hero-image.png" alt="TP Dental Setia Alam dental clinic">
+      </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <section id="about" class="section about-section">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>TP DENTAL SETIA ALAM</h2>
+          <p>
+            We are committed to delivering comprehensive dental treatment for every patient.
+            We offer a range of services, including general dentistry, preventive care,
+            children's dentistry and orthodontic treatments.
+            <br><br>
+            At TP Dental Setia Alam, we are dedicated to helping you achieve optimal oral
+            health and a confident smile in a professional and welcoming environment.
+          </p>
+        </div>
+
+        <div class="about-image-wrap">
+          <img class="about-image" src="img/TP Dental.jpeg" alt="TP Dental Setia Alam clinic">
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section services-section">
+      <div class="section-inner">
+        <h2>Our Services</h2>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>General Dentistry</h3>
+            <img src="img/services1.png" alt="General dentistry service" loading="lazy">
+          </article>
+
+          <article class="service-card">
+            <h3>Dentures</h3>
+            <img src="img/services2.jpg" alt="Dentures service" loading="lazy">
+          </article>
+
+          <article class="service-card">
+            <h3>Oral Surgery</h3>
+            <img src="img/services3.png" alt="Oral surgery service" loading="lazy">
+          </article>
+
+          <article class="service-card">
+            <h3>Braces</h3>
+            <img src="img/services4.png" alt="Braces and orthodontic service" loading="lazy">
+          </article>
+
+          <article class="service-card">
+            <h3>Children's Dentistry</h3>
+            <img src="img/services5.jpg" alt="Children's dentistry service" loading="lazy">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR DOCTOR -->
+    <section id="doctor" class="section doctor-section">
+      <div class="doctor-container">
+        <div class="doctor-text">
+          <h2>DR KELVIN QUAH (I.D.G, USU)</h2>
+
+          <p>
+            Dr Kelvin is a dental surgeon with a decade of experience. He graduated from
+            Universitas Sumatera Utara in 2016. After returning to Malaysia, he was posted
+            to Langkawi, where he served at Klinik Pergigian Air Hangat and Hospital
+            Sultanah Maliha, focusing on outpatient and trauma cases. He also served as a
+            junior Dental Officer in the Oral and Maxillofacial Surgery Department and
+            Paediatric Dental Department at Hospital Sultanah Bahiyah.
+            <br><br>
+            After leaving the Ministry of Health in 2019, Dr Kelvin became a full-time
+            private practitioner, focusing mainly on general dentistry, dentures and minor
+            oral surgery.
+          </p>
+        </div>
+
+        <div class="doctor-photo">
+          <img src="img/drkelvin.jpg" alt="Dr Kelvin Quah" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- GOOGLE REVIEWS -->
+    <section id="reviews" class="section reviews-section">
+      <div class="section-inner reviews-content">
+        <a
+          href="https://www.google.com/maps/place/TP+Dental+Setia+Alam+(Dental+Clinic+Setia+Alam)/@3.1279642,101.4664279,17z/data=!3m1!5s0x31cc5171dd958755:0xb3fc4439e7acaa70!4m8!3m7!1s0x31cc516ad822e9bb:0xf1bcac0f9386655a!8m2!3d3.1279642!4d101.4690028!9m1!1b1!16s%2Fg%2F11s5gk7qxc?entry=ttu"
+          target="_blank" rel="noopener noreferrer" class="review-link">
+          <i class="fa-brands fa-google" aria-hidden="true"></i>
+          <span>Make A Review</span>
+        </a>
+
+        <img class="review-image" src="img/review.jpg"
+          alt="Google reviews for TP Dental Setia Alam" loading="lazy">
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+      <div class="section-inner">
+        <h2>Contact Us</h2>
+
+        <div class="contact-container">
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps?q=TP%20Dental%20Setia%20Alam%20Dental%20Clinic&output=embed"
+              title="Map to TP Dental Setia Alam"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <div class="contact-info">
+            <p>
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+              <a href="https://wa.me/601112700876" target="_blank" rel="noopener noreferrer">011-1270 0876</a>
+            </p>
+
+            <p>
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+              <a href="https://www.instagram.com/tpdental__/" target="_blank" rel="noopener noreferrer">tpdental_medical</a>
+            </p>
+
+            <p>
+              <i class="fab fa-facebook" aria-hidden="true"></i>
+              <a href="https://www.facebook.com/tpdentalmedical/" target="_blank" rel="noopener noreferrer">TP Dental Setia Alam</a>
+            </p>
+
+            <p>
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <span>No 65, (Ground Floor), Jalan Setia Gemilang BG U13/BG, Precinct 15, Setia Alam Seksyen U13, 40170 Shah Alam, Selangor.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>Privacy Policy &copy; 2025 TP Dental Setia Alam. All Rights Reserved.</p>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a class="whatsapp-float"
+    href="https://wa.me/601112700876"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contact TP Dental Setia Alam on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    <span>GET IN TOUCH</span>
+  </a>
+
+  <!-- MOBILE MENU -->
   <script>
-    // 手机菜单切换
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
 
-    menuToggle.addEventListener('click', function() {
-      navMenu.classList.toggle('active');
+    function closeMenu() {
+      navMenu.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation menu");
+      menuToggle.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
+    }
+
+    menuToggle.addEventListener("click", function(event) {
+      event.stopPropagation();
+
+      const isOpen = navMenu.classList.toggle("active");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+
+      menuToggle.innerHTML = isOpen
+        ? '<i class="fas fa-xmark" aria-hidden="true"></i>'
+        : '<i class="fas fa-bars" aria-hidden="true"></i>';
     });
 
-    // 点击菜单项后自动关闭
-    const navLinks = navMenu.querySelectorAll('a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        navMenu.classList.remove('active');
-      });
+    navMenu.querySelectorAll("a").forEach(function(link) {
+      link.addEventListener("click", closeMenu);
     });
 
-    // 点击其他区域关闭菜单
-    document.addEventListener('click', function(event) {
-      if (!event.target.closest('header')) {
-        navMenu.classList.remove('active');
+    document.addEventListener("click", function(event) {
+      if (!event.target.closest(".site-header")) {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener("resize", function() {
+      if (window.innerWidth > 768) {
+        closeMenu();
       }
     });
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ec179ddf724c7bd',t:'MTc3NjE1Njc2NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
